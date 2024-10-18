@@ -25,15 +25,6 @@
         td.label-cell
           strong.label 必須
         td.arrow-box-cell
-          | 種別
-        td.responsive-cell
-         .input-container
-          = f.hidden_field :select
-          = @estimate.select
-      tr
-        td.label-cell
-          strong.label 必須
-        td.arrow-box-cell
           | 担当者名
         td.responsive-cell
          .input-container
@@ -43,11 +34,11 @@
         td.label-cell
           strong.label 必須
         td.arrow-box-cell
-          | フリガナ
+          | 携帯番号
         td.responsive-cell
          .input-container
-         = f.hidden_field :name_kana
-         = @estimate.name_kana
+          = f.hidden_field :mobile
+          = @estimate.mobile
       tr
         td.label-cell
           strong.label 必須
@@ -61,7 +52,7 @@
         td.label-cell
           strong.label 必須
         td.arrow-box-cell
-          | 住所
+          | 住所（ビル名・部屋番号迄記載）
         td.responsive-cell
          .input-container
           = f.hidden_field :address
@@ -79,27 +70,16 @@
         td.label-cell
           strong.label.label-blue 任意
         td.arrow-box-cell
-          | URL
+          | 会社URL
         td.responsive-cell
          .input-container
           = f.hidden_field :url
           = @estimate.url
       tr
         td.label-cell
-          strong.label.label-blue 任意
-        td.arrow-box-cell
-          | URL
-        td.responsive-cell
-         .input-container
-          = f.hidden_field :settlement
-          = @estimate.settlement
-      tr
-        td.label-cell
           strong.label 必須
         td.arrow-box-cell
           | 買取希望額
-          br
-          |
         td.responsive-cell
          .input-container
          = f.hidden_field :price

@@ -51,12 +51,12 @@ class EstimatesController < ApplicationController
     end
   end
 
-  def send_mail
-    @estimate = Estimate.find(params[:id])
-    @estimate.update(send_mail_flag: true)
-    EstimateMailer.client_email(@estimate).deliver # 全企業に送信
-    redirect_to estimate_path(@estimate), alert: "送信しました"
-  end
+  #def send_mail
+   # @estimate = Estimate.find(params[:id])
+    #@estimate.update(send_mail_flag: true)
+    #EstimateMailer.client_email(@estimate).deliver # 全企業に送信
+   # redirect_to estimate_path(@estimate), alert: "送信しました"
+  #end
 
   def apply
     estimate = Estimate.find(params[:id])
@@ -92,6 +92,7 @@ class EstimatesController < ApplicationController
       :name,  #名前
       :name_kana,  #フリガナ
       :tel, #電話番号
+      :mobile,
       :email, #メールアドレス
       :url, #会社HP
       :address, #住所
