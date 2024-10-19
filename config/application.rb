@@ -20,7 +20,7 @@ module Eatery
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
-    address: 'smtp3.lolipop.jp',
+    address: 'smtp.lolipop.jp',
     domain: 'factolink.jp',
     port: 587,
     user_name: 'info@factolink.jp',
